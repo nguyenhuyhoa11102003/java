@@ -16,7 +16,7 @@ public class Main {
 	        System.out.println(hashMap.get(null)) ;
 		  
 	        
-	     // Cap nhat lai gia tri cua value
+	        // Cap nhat lai gia tri cua value
 	        hashMap.put(null, "D");
 	        System.out.println(hashMap.get(null)) ;
 	        
