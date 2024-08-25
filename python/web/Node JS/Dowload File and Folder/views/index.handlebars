@@ -1,0 +1,21 @@
+<input style="width: 50%" id="name" type="text" placeholder="Enter the name of file or folder you want to download">
+<button id="btn-download" onclick="download()">Download</button>
+
+<script>
+	function download() {
+		let name = document.getElementById('name').value;
+
+		fetch('/download/' + name)
+		.then(response => response.json())
+		.then(json => {
+			alert(json.message);
+			
+			// Nếu thành công thì mới download
+			if (json.code !== 0)
+				window.location = '/download/' + name;
+
+			// Xóa value trong input sau khi click button
+			document.getElementById('name').value = ""; 
+		})
+	}
+</script>

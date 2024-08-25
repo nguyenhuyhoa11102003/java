@@ -1,0 +1,17 @@
+{
+  "name": "CSURF",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "CSURF": "file:",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3"
+  }
+}
