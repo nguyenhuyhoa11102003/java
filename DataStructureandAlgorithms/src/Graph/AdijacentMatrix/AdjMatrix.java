@@ -60,63 +60,48 @@ public class AdjMatrix {
 		}
 
 	}
-	
-	
-	public void DFS(int start  , boolean[] visited) {
-        visited[start] = true;
 
-        
-        System.out.print(start + " ");
-        
-        for(int i = 0;i< n ;i++) {
-        	if(matrix[start][i] != 0 && !visited[i]) // kiem tra gia tri va flag = falsse
-                DFS(i, visited);
-        }
+	public void DFS(int start, boolean[] visited) {
+		visited[start] = true;
+
+		System.out.print(start + " ");
+
+		for (int i = 0; i < n; i++) {
+			if (matrix[start][i] != 0 && !visited[i]) // kiem tra gia tri va flag = falsse
+				DFS(i, visited);
+		}
 	}
-	
-	  public void DFS(int start)
-	    {
-	        boolean[] visited = new boolean[n];
-	        DFS(start, visited);
-	    }
-	
-	
-	
-	
-	
+
+	public void DFS(int start) {
+		boolean[] visited = new boolean[n];
+		DFS(start, visited);
+	}
+
 	public void dfs_stack(int start) {
-		
-		 boolean visited[] = new boolean[n]; 
-	        Stack<Integer> stack = new Stack<>(); 
-	        
-	        
-	        stack.push(start);             
-	        int temp = 0;
-            
 
-	        
-	        while(!stack.empty()) {
-	        	 start = stack.peek();                      
-	             stack.pop();                    
-	             
-	             
-	             if(!visited[start]) 
-	             { 
-	                 System.out.print(start + " "); 
-	                 visited[start] = true; 
-	             } 
-	             
-	             for(int i=0;i<matrix[start].length;i++)  
-	             {
-	                 temp = i;
+		boolean visited[] = new boolean[n];
+		Stack<Integer> stack = new Stack<>();
 
-	                 if (!visited[temp])                   
-	                     stack.push(temp);                         
-	             }          
-	        }
-	        
-	        
-		
+		stack.push(start);
+		int temp = 0;
+
+		while (!stack.empty()) {
+			start = stack.peek();
+			stack.pop();
+
+			if (!visited[start]) {
+				System.out.print(start + " ");
+				visited[start] = true;
+			}
+
+			for (int i = 0; i < matrix[start].length; i++) {
+				temp = i;
+
+				if (!visited[temp])
+					stack.push(temp);
+			}
+		}
+
 	}
-	
+
 }
