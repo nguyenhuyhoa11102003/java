@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/products.css">
+<div class="container pt-3">
+    <div class="input-group mb-3">
+        <input id="search" name="search" type="text" class="form-control" placeholder="Nhập tên thiết bị bạn muốn tìm kiếm" aria-describedby="btn-search" />
+        <button onclick="search()" class="btn btn-dark" type="button" id="btn-search" data-mdb-ripple-init
+            data-mdb-ripple-color="dark">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <div class="row">
+        {{#each products}}
+        <div class="col-lg-3 col-md-4 col-12 item" onclick="showProductDetail('{{id}}')">
+            <img src="/uploads/{{image}}">
+            <p>{{name}}</p>
+            <p class="text-danger">{{formatPrice price}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script src="/js/products.js"></script>

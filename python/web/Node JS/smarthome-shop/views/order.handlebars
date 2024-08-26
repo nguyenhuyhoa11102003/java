@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/order.css">
+<div class="container pt-3" style="margin-bottom: 300px;">
+    <table class="table table-borderless align-middle text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Mã Đơn Hàng</th>
+                <th>Tổng Tiền</th>
+                <th>Ngày</th>
+                <th>Trạng Thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each orders}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{formatPrice total_price}}</td>
+                    <td>{{date}}</td>
+                    <td><span class="badge badge-{{colorOrderStatus status}} rounded-pill d-inline">{{status}}</span></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

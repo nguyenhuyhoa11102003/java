@@ -1,0 +1,39 @@
+<div class="container pt-3">
+    <h2 class="text-dark">Thêm sản phẩm mới</h2>
+
+    <div class="form-outline mb-2">
+        <input name="name" type="text" id="name" class="form-control" />
+        <label class="form-label" for="name">Tên sản phẩm</label>
+    </div>
+
+    <div class="form-outline mb-2">
+        <textarea class="form-control" id="description" rows="4"></textarea>
+        <label class="form-label" for="description">Mô tả</label>
+    </div>
+
+    <div class="form-outline mb-2">
+        <input type="number" id="price" class="form-control" min="1"/>
+        <label class="form-label" for="price">Giá tiền</label>
+    </div>
+
+    <div class="custom-file mb-2">
+        <input type="file" class="custom-file-input" id="image" accept="image/*">
+        <label class="custom-file-label" for="image">Upload ảnh</label>
+    </div>
+
+    <select class="mb-2 custom-select" name="catalog" id="catalog">
+        <option value="" selected>Danh mục</option>
+        <option value="Đèn thông minh">Đèn thông minh</option>
+        <option value="Cảm biến">Cảm biến</option>
+        <option value="Công tắc thông minh">Công tắc thông minh</option>
+        <option value="Bộ rèm cửa">Bộ rèm cửa</option>
+        <option value="Phụ kiện">Phụ kiện</option>
+        <option value="Khác">Khác</option>
+    </select>
+
+    <button onclick="add()" class="btn btn-dark">Thêm</button>
+    <button onclick="reset()" class="btn btn-secondary">Xóa</button>
+</div>
+
+<script src="/js/main.js"></script>
+<script src="/js/add-product.js"></script>

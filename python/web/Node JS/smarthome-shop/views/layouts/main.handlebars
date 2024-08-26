@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website bán thiết bị Smarthome</title>
+    <link rel="icon" href="/img/icon1.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">                
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <a class="navbar-brand mt-2 mt-lg-0" href="/">
+                <img src="/img/icon2.png" height="50" width="200" alt="Logo" loading="lazy"/>
+            </a>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/product/Đèn thông minh">Đèn thông minh</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/Cảm biến">Cảm biến</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/Công tắc thông minh">Công tắc thông minh</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/Bộ rèm cửa">Bộ rèm cửa</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/Phụ kiện">Phụ kiện</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/Khác">Khác</a></li>
+            </ul>
+            </div>
+                <div class="d-flex align-items-center">
+                    {{#if username}}                            
+                        <div class="dropdown">
+                            <span class="dropdown-toggle d-flex align-items-center hidden-arrow" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <span><i class="fa-regular fa-circle-user"></i> Xin chào khách hàng <b>{{username}}</b> <i class="fa-solid fa-caret-down"></i></span>
+                            </span>
+
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li><a class="dropdown-item" href="/cart/"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                <li><a class="dropdown-item" href="/order/"><i class="fa-solid fa-receipt"></i> Đơn hàng</a></li>
+                                <li><a class="dropdown-item" href="/account/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</a></li>
+                            </ul>
+                        </div>
+
+                    {{else}}
+                        <a class="text-reset me-3" href="/account/login">Đăng nhập</i></a>
+
+                    {{/if}}
+                </div>
+        </div>
+    </nav>
+
+    {{{body}}}
+
+    <footer class="mt-5 bg-dark pt-5">
+        <div class="row px-5">
+            <div class="col-6 text-light">
+                <img src="/img/icon2.png" class="mb-4">
+                <p>Tên đơn vị: CÔNG TY CỔ PHẦN VIỄN THÔNG FPT</p>
+                <p>Người đại diện: Hoàng Việt Anh</p>
+                <p>Địa chỉ: Tầng 2, Tòa nhà FPT Cầu Giấy, Phố Duy Tân, P. Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội</p>
+                <p>Điện thoại: 19006600 - Email: fptsmarthome@fpt.com</p>
+                <p>Giấy chứng nhận ĐKKD số 0101778163 do Sở Kế hoạch Đầu tư Thành phố Hà Nội cấp ngày 28/07/2005</p>
+                <img src="/img/bocongthuong.png" width="200">
+            </div>
+            <div class="col-3 text-light">
+                <h4>Sản phẩm</h4>
+                <a href="/product/Đèn thông minh">Đèn thông minh</a><br>
+                <a href="/product/Cảm biến">Cảm biến</a><br>
+                <a href="/product/Công tắc thông minh">Công tắc thông minh</a><br>
+                <a href="/product/Bộ rèm cửa">Bộ rèm cửa</a><br>
+                <a href="/product/Phụ kiện">Phụ kiện</a><br>
+                <a href="/product/Khác">Khác</a><br>
+            </div>
+            <div class="col-3 text-light">
+                <h4>Hỗ trợ</h4>
+                <a href="#">FAQ</a><br>
+                <a href="#">Đăng ký đại lý</a><br>
+                <a href="#">Chính sách bảo hành</a><br>
+                <a href="#">Chính sách quyền riêng tư</a><br>
+                <a href="#">Điều khoản sử dụng</a><br>
+                <a href="#">Chính sách xử lý dữ liệu cá nhân</a><br>
+            </div>
+            <div class="text-center">
+                <a href="#"><i class="fa-brands fa-facebook text-dark" style="font-size: 50px;"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube text-dark" style="font-size: 50px;"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+</body>
+</html>
