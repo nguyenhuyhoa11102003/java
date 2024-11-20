@@ -50,8 +50,7 @@ END;
 DECLARE 
     CURSOR my_cursor IS SELECT * FROM product;
 BEGIN
-    FOR p IN my_cursor
-    LOOP
-        DBMS_OUTPUT.PUT_LINE(p.id || ', ' || p.name || ', ' || p.price);
+    FOR p IN my_cursor LOOP
+            DBMS_OUTPUT.PUT_LINE(p.id || ', ' || p.name || ', ' || p.price);
     END LOOP;
 END;

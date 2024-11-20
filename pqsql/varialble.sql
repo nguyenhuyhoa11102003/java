@@ -18,8 +18,8 @@ SELECT * FROM employee;
 /*
     Variable g?m 2 lo?i:
     + User variable
-    + Bind variable (hay host variable): là nh?ng bi?n ???c t?o ra trong SQL*Plus
-    (không c?n vi?t trong PL/SQL Block) và ???c tham chi?u trong PL/SQL.
+    + Bind variable (hay host variable): lï¿½ nh?ng bi?n ???c t?o ra trong SQL*Plus
+    (khï¿½ng c?n vi?t trong PL/SQL Block) vï¿½ ???c tham chi?u trong PL/SQL.
     
 */
 DECLARE 
