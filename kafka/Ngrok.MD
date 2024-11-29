@@ -1,0 +1,3 @@
+- Ngrok? 
+    -  tunnel between localhost and internet
+    -   Giúp người khác mạng có thể truy cập được localhost của bạn thông qua custom domain của ngrok
