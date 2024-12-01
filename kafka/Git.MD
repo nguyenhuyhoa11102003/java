@@ -14,3 +14,19 @@ git push: Gửi các thay đổi đã được commit từ nhánh cục bộ lê
 git reset: Hoàn tác các commit bằng cách di chuyển con trỏ HEAD.
 git stash: Lưu tạm thời các thay đổi chưa được commit.
 git reflog: Truy cập lịch sử các lệnh Git và giúp khôi phục công việc bị mất.
+
+
+
+behind : số lượng commit mà nhánh bạn thiếu so với nhánh chính
+ahead: số lượng commit mà nhánh bạn thêm so với nhánh chính
+
+
+
+behind = 1  ( kéo commit từ main về  nhánh dev)
+git branch <>
+git pull origin main
+git commit -m "Merged latest changes from main"
+git push origin develop
+
+
+
